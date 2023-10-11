@@ -70,7 +70,7 @@ function addChat(input, product) {
   let userDiv = document.createElement("div");
   userDiv.id = "user";
   userDiv.className = "user response";
-  userDiv.innerHTML = `<img src="user.png" class="avatar"><span>${input}</span>`;
+  userDiv.innerHTML = `<img src="user-top.png" class="avatar"><span>${input}</span>`;
   messagesContainer.appendChild(userDiv);
 
   let botDiv = document.createElement("div");
@@ -80,7 +80,7 @@ function addChat(input, product) {
   botImg.src = "bot-mini.png";
   botImg.className = "avatar";
   botDiv.className = "bot response";
-  botText.innerText = "Typing...";
+  botText.innerText = "Đang suy nghĩ...";
   botDiv.appendChild(botText);
   botDiv.appendChild(botImg);
   messagesContainer.appendChild(botDiv);

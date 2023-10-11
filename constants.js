@@ -1,6 +1,6 @@
 // Options the user could type in
 const prompts = [
-  ["hi", "hey", "hello", "good morning", "good afternoon"],
+  ["xin chào", "hey", "hello", "chào", "hi", "chào bạn", "chào buổi sáng"],
   ["how are you", "how is life", "how are things"],
   ["what are you doing", "what is going on", "what is up"],
   ["how old are you"],
@@ -30,7 +30,7 @@ const prompts = [
 // Possible responses, in corresponding order
 
 const replies = [
-  ["Hello!", "Hi!", "Hey!", "Hi there!","Howdy"],
+  ["xin chào", "chào bạn", "chào buổi sáng","Rất vui gặp bạn", "Tôi giúp gì được cho bạn", "Bạn gọi tôi à", "Có tôi đây", "Vâng, tôi sẵn sàng nghe"],
   [
     "Fine... how are you?",
     "Pretty well, how are you?",
@@ -63,12 +63,12 @@ const replies = [
 // Random for any other user input
 
 const alternative = [
-  "Same",
-  "Go on...",
-  "Bro...",
-  "Try again",
-  "I'm listening...",
-  "I don't understand :/"
+  "Sao cơ",
+  "Bạn hỏi lại xem nào",
+  "Alo, lại đi",
+  "Hừm, bạn thử câu hỏi khác xem",
+  "Hừm, có vẻ hơi khó với tôi",
+  "Xin lỗi, tôi chưa có thông tin về câu hỏi này"
 ]
 
 // Whatever else you want :)
