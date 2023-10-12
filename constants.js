@@ -1,6 +1,6 @@
 // Options the user could type in
 const prompts = [
-  ["xin chào", "hey", "hello", "chào", "hi", "chào bạn", "chào buổi sáng"],
+  ["xin chào", "hey", "hello", "chào bạn", "chào buổi sáng"],
   ["bạn thế nào", "bạn khỏe không", "dạo này bạn ổn chứ"],
   ["bạn đang làm gì vậy", "có chuyện gì vậy", "gì thế"],
   ["bạn bao nhiêu tuổi"],
