@@ -9,14 +9,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+
+
+
+
+
+
 function removeVietnameseTones(str) {
-  str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g,"a"); 
-  str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g,"e"); 
-  str = str.replace(/ì|í|ị|ỉ|ĩ/g,"i"); 
-  str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g,"o"); 
-  str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g,"u"); 
-  str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g,"y"); 
-  str = str.replace(/đ/g,"d");
+  str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+  str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+  str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+  str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+  str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+  str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+  str = str.replace(/đ/g, "d");
   str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
   str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
   str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "I");
@@ -30,39 +37,32 @@ function removeVietnameseTones(str) {
   str = str.replace(/\u02C6|\u0306|\u031B/g, ""); // ˆ ̆ ̛  Â, Ê, Ă, Ơ, Ư
   // Remove extra spaces
   // Bỏ các khoảng trắng liền nhau
-  str = str.replace(/ + /g," ");
+  str = str.replace(/ + /g, " ");
   str = str.trim();
   // Remove punctuations
   // Bỏ dấu câu, kí tự đặc biệt
-  str = str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|-|{|}|\||\\/g," ");
+  str = str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|-|{|}|\||\\/g, " ");
   return str;
 }
 
 
 
-console.log(removeVietnameseTones("xin chào bạn"));
+
+
 
 function output(input) {
   let product;
-
   // Regex remove non word/space chars
   // Trim trailing whitespce
   // Remove digits - not sure if this is best
   // But solves problem of entering something like 'hi1'
 
-  let text = input.toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
-  text = text
-    .replace(/ a /g, " ")   // 'tell me a story' -> 'tell me story'
-    .replace(/i feel /g, "")
-    .replace(/whats/g, "what is")
-    .replace(/please /g, "")
-    .replace(/ please/g, "")
-    .replace(/r u/g, "are you");
+  let text = removeVietnameseTones(input).toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim();
 
-  if (compare(prompts, replies, text)) { 
+  if (compare(prompts, replies, text)) {
     // Search for exact match in `prompts`
     product = compare(prompts, replies, text);
-  } else if (text.match(/cảm ơn/gi)) {
+  } else if (text.match(/cam on ban/gi)) {
     product = "Không có gì, rất vui được giúp đỡ bạn!"
   } else if (text.match(/(corona|covid|virus)/gi)) {
     // If no match, check if message contains `coronavirus`
@@ -76,14 +76,23 @@ function output(input) {
   addChat(input, product);
 }
 
+
+
+
+
+
+
+
+
+
 function compare(promptsArray, repliesArray, string) {
+  console.log(string);
   let reply;
   let replyFound = false;
   for (let x = 0; x < promptsArray.length; x++) {
     for (let y = 0; y < promptsArray[x].length; y++) {
-      console.log(removeVietnameseTones(promptsArray[x][y]).toLowerCase());
-      console.log(removeVietnameseTones(string).toLowerCase());
-      if (removeVietnameseTones(promptsArray[x][y]).toLowerCase() == removeVietnameseTones(string).toLowerCase()) {
+      console.log(string?.includes(removeVietnameseTones(promptsArray[x][y]).toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim()));
+      if ( string?.includes(removeVietnameseTones(promptsArray[x][y]).toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim())) {
         let replies = repliesArray[x];
         reply = replies[Math.floor(Math.random() * replies.length)];
         replyFound = true;
@@ -98,6 +107,11 @@ function compare(promptsArray, repliesArray, string) {
   }
   return reply;
 }
+
+
+
+
+
 
 function addChat(input, product) {
   const messagesContainer = document.getElementById("messages");
@@ -128,5 +142,4 @@ function addChat(input, product) {
     textToSpeech(product)
   }, 2000
   )
-
 }
