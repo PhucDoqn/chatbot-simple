@@ -7,8 +7,8 @@ const prompts = [
   ["bạn là ai", "bạn có phải người không", "bạn là robot à", "bạn là người hay robot"],
   ["tạo ra bạn"],
   [
-    "Tên bạn",
-    "bạn tên gì",
+    "tên bạn",
+    "bạn tên",
     "may i know your name",
     "what is your name",
     "what call yourself",
