@@ -1,20 +1,21 @@
 // Options the user could type in
 const prompts = [
   ["xin chào", "hey", "hello", "chào", "hi", "chào bạn", "chào buổi sáng"],
-  ["how are you", "how is life", "how are things"],
-  ["what are you doing", "what is going on", "what is up"],
-  ["how old are you"],
-  ["who are you", "are you human", "are you bot", "are you human or bot"],
-  ["who created you", "who made you"],
+  ["bạn thế nào", "bạn khỏe không", "dạo này bạn ổn chứ"],
+  ["bạn đang làm gì vậy", "có chuyện gì vậy", "gì thế"],
+  ["bạn bao nhiêu tuổi"],
+  ["bạn là ai", "bạn có phải người không", "bạn là robot à", "bạn là người hay robot"],
+  ["ai tạo ra bạn"],
   [
-    "your name please",
-    "your name",
+    "Tên bạn là gì",
+    "bẹn tên gì",
     "may i know your name",
     "what is your name",
-    "what call yourself"
+    "what call yourself",
+    "tên của bạn là gì"
   ],
-  ["i love you"],
-  ["happy", "good", "fun", "wonderful", "fantastic", "cool"],
+  ["i love you", "tôi yêu bạn"],
+  ["happy", "good", "fun", "wonderful", "fantastic", "cool", "hạnh phúc"],
   ["bad", "bored", "tired"],
   ["help me", "tell me story", "tell me joke"],
   ["ah", "yes", "ok", "okay", "nice"],
@@ -32,32 +33,32 @@ const prompts = [
 const replies = [
   ["xin chào", "chào bạn", "chào buổi sáng","Rất vui gặp bạn", "Tôi giúp gì được cho bạn", "Bạn gọi tôi à", "Có tôi đây", "Vâng, tôi sẵn sàng nghe"],
   [
-    "Fine... how are you?",
-    "Pretty well, how are you?",
-    "Fantastic, how are you?"
+    "Tôi khỏe, cảm ơn bạn.",
+    "Yeah, tôi rất khỏe, cảm ơn bạn",
+    "Rất tuyệt vời, bạn thì sao"
   ],
   [
-    "Nothing much",
-    "About to go to sleep",
-    "Can you guess?",
-    "I don't know actually"
+    "Hừm, không làm gì cả",
+    "Tôi đang định đi ngủ",
+    "Bạn đoán xem, hì hì",
+    "Tôi đang đợi bạn để trò chuyện"
   ],
-  ["I am infinite"],
-  ["I am just a bot", "I am a bot. What are you?"],
-  ["The one true God, JavaScript"],
-  ["I am nameless", "I don't have a name"],
-  ["I love you too", "Me too"],
-  ["Have you ever felt bad?", "Glad to hear it"],
-  ["Why?", "Why? You shouldn't!", "Try watching TV"],
+  ["Tôi không có tuổi", "tôi vô số tuổi"],
+  ["Tôi là một robot", "Tôi không phải con người, tôi là robot"],
+  ["Tôi được tạo ra bởi nhóm học sinh Trung học cơ sở Quỳnh Châu", "các bạn nhỏ học sinh Trung học cơ sở Quỳnh Châu tạo ra tôi đó"],
+  ["Tôi là trợ lý học đường", "bạn có thể gọi tôi là trợ lý học đường"],
+  ["Tôi cũng rất yêu các bạn", "tôi cũng quý bạn lắm"],
+  ["Oh , thật tuyệt vời, chia vui với bạn", "Tuyệt quá, tôi chúc mừng bạn nha"],
+  ["Tại sao vậy", "Oh bạn nên đi nghỉ đi", "Bạn thử xem TV xem sao."],
   ["What about?", "Once upon a time..."],
   ["Tell me a story", "Tell me a joke", "Tell me about yourself"],
-  ["Bye", "Goodbye", "See you later"],
-  ["Sushi", "Pizza"],
+  ["Tạm biệt bạn", "Goodbye", "Hẹn gặp lại bạn sau nhé"],
+  ["Sushi", "Tôi thích bánh cuốn lắm", "Bánh mì", "Tôi rất thích ăn phở"],
   ["Bro!"],
-  ["Great question"],
-  ["That's ok","I understand","What do you want to talk about?"],
-  ["Please say something :("],
-  ["Haha!","Good one!"]
+  ["Oh một câu hỏi tuyệt vời, tiếc là tôi không biết câu trả lời"],
+  ["Oh nó ổn mà","Ừm tôi hiểu","Bạn muốn nói về điều gì vậy"],
+  ["Bạn nói gì đó đi"],
+  ["Haha!","Buồn cười ghê", "Hihi"]
 ]
 
 // Random for any other user input
@@ -73,4 +74,4 @@ const alternative = [
 
 // Whatever else you want :)
 
-const coronavirus = ["Please stay home", "Wear a mask", "Fortunately, I don't have COVID", "These are uncertain times"]
+const coronavirus = ["Hãy ở trong nhà thôi nhé", "Nhớ đeo mặt nạ nha", "Thật may mắn, tôi không bị COVID", "Nhớ rửa tay thường xuyên nha"]
