@@ -24,6 +24,8 @@ const prompts = [
   ["what", "why", "how", "where", "when"],
   ["no","not sure","maybe","no thanks"],
   ["haha","ha","lol","hehe","funny","joke"],
+  ['bao luc hoc duong'],
+  ['hoc tot hon']
 ]
 
 // Possible responses, in corresponding order
@@ -54,7 +56,9 @@ const replies = [
   ["Bro!"],
   ["Oh một câu hỏi tuyệt vời, tiếc là tôi không biết câu trả lời"],
   ["Oh nó ổn mà","Ừm tôi hiểu","Bạn muốn nói về điều gì vậy"],
-  ["Haha!","Buồn cười ghê", "Hihi"]
+  ["Haha!","Buồn cười ghê", "Hihi"],
+  ["bạo lực học đường là không tốt. Nếu bạn bị bắt nạt, hãy thưa lại với giáo viên hoặc phụ huynh để được can thiệp sớm nhất."],
+  ['Muốn học tốt, bạn cần chăm chỉ làm bào tập về nhà, chú ý nghe giảng trên lớp. Ghi nhớ những lỗi sai để sửa lịa trong tương lai.']
 ]
 
 // Random for any other user input
