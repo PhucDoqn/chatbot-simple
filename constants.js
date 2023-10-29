@@ -10,7 +10,8 @@ const prompts = [
   ['hoc tot hon'],
   // cho nay them cau hoi
   ['cong thuc tinh chu vi hinh tron'],
-  
+ ['11111111111111111'],
+ ['222222222'],
 
 
   [
@@ -55,8 +56,8 @@ const replies = [
   ['Muốn học tốt, bạn cần chăm chỉ làm bào tập về nhà, chú ý nghe giảng trên lớp. Ghi nhớ những lỗi sai để sửa lịa trong tương lai.'],
   // cho nay them tra loi
   ['2 * Pi * r'],
-
-
+  ['11111111111111111111'],
+  ['2222222222222222222'],
 
 
 
