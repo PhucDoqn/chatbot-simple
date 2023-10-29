@@ -90,7 +90,7 @@ function compare(promptsArray, repliesArray, string) {
   let reply;
   let replyFound = false;
   for (let x = 0; x < promptsArray.length; x++) {
-    for (let y = 0; y < promptsArray[x].length; y++) {
+    for (let y = 0; y < promptsArray[x]?.length; y++) {
       console.log(string?.includes(removeVietnameseTones(promptsArray[x][y]).toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim()));
       if ( string?.includes(removeVietnameseTones(promptsArray[x][y]).toLowerCase().replace(/[^\w\s]/gi, "").replace(/[\d]/gi, "").trim())) {
         let replies = repliesArray[x];

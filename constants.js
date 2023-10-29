@@ -6,6 +6,13 @@ const prompts = [
   ["bạn bao nhiêu tuổi"],
   ["bạn là ai", "bạn có phải người không", "bạn là robot à", "bạn là người hay robot"],
   ["tạo ra bạn"],
+  ['bao luc hoc duong'],
+  ['hoc tot hon'],
+  // cho nay them cau hoi
+  ['cong thuc tinh chu vi hinh tron'],
+  
+
+
   [
     "tên bạn",
     "bạn tên",
@@ -24,8 +31,6 @@ const prompts = [
   ["what", "why", "how", "where", "when"],
   ["no","not sure","maybe","no thanks"],
   ["haha","ha","lol","hehe","funny","joke"],
-  ['bao luc hoc duong'],
-  ['hoc tot hon']
 ]
 
 // Possible responses, in corresponding order
@@ -46,6 +51,17 @@ const replies = [
   ["Tôi không có tuổi", "tôi vô số tuổi"],
   ["Tôi là một robot", "Tôi không phải con người, tôi là robot"],
   ["Tôi được tạo ra bởi nhóm học sinh Trung học cơ sở Quỳnh Châu", "các bạn nhỏ học sinh Trung học cơ sở Quỳnh Châu tạo ra tôi đó"],
+  ["bạo lực học đường là không tốt. Nếu bạn bị bắt nạt, hãy thưa lại với giáo viên hoặc phụ huynh để được can thiệp sớm nhất."],
+  ['Muốn học tốt, bạn cần chăm chỉ làm bào tập về nhà, chú ý nghe giảng trên lớp. Ghi nhớ những lỗi sai để sửa lịa trong tương lai.'],
+  // cho nay them tra loi
+  ['2 * Pi * r'],
+
+
+
+
+
+
+
   ["Tôi là trợ lý học đường", "bạn có thể gọi tôi là trợ lý học đường"],
   ["Tôi cũng rất yêu các bạn", "tôi cũng quý bạn lắm"],
   ["Oh , thật tuyệt vời, chia vui với bạn", "Tuyệt quá, tôi chúc mừng bạn nha"],
@@ -57,8 +73,6 @@ const replies = [
   ["Oh một câu hỏi tuyệt vời, tiếc là tôi không biết câu trả lời"],
   ["Oh nó ổn mà","Ừm tôi hiểu","Bạn muốn nói về điều gì vậy"],
   ["Haha!","Buồn cười ghê", "Hihi"],
-  ["bạo lực học đường là không tốt. Nếu bạn bị bắt nạt, hãy thưa lại với giáo viên hoặc phụ huynh để được can thiệp sớm nhất."],
-  ['Muốn học tốt, bạn cần chăm chỉ làm bào tập về nhà, chú ý nghe giảng trên lớp. Ghi nhớ những lỗi sai để sửa lịa trong tương lai.']
 ]
 
 // Random for any other user input
